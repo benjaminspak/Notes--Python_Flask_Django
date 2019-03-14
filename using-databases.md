@@ -152,3 +152,22 @@ if __name__ == '__main__':
 #### Capturing Inputs from the CLI
 + sys - a Python module that contains functionality fron interacting with the system
 + sys.stdin - a Python object that represents the standard input stream. In most cases, this will be the keyboard
++ .read() - takes in all data provided by the cli
+
+
+```python
+
+import sys
+
+def add_entry():
+    """ Add an entry. """
+    print("Enter your entry. Press ctrl+d when finished.")
+    data = sys.stdin.read().strip()
+
+    if data:
+        if input('Save entry? [Yn] ').lower() != 'n':
+            Entry.create(content=data)
+            print("Saved successfully!")
+
+```
+
