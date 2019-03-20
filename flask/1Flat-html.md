@@ -76,3 +76,8 @@ app.run(debug=True, port=8000, host='0.0.0.0')
   </body>
 </html>
 ```
+
+#### Added static files / style sheets
+
++ The static/ directory is served automatically at /static while you're running your Flask app.
++ You also don't have to use every block in every child template. If you don't specify a new version of the block, Flask will just use whatever is there in the parent template.
